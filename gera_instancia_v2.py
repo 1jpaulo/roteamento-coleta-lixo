@@ -49,7 +49,7 @@ def salva_grafo_txt(grafo, nome):
     try:
         if not os.path.exists(CAMINHO_ARQUIVOS):
             os.makedirs(CAMINHO_ARQUIVOS)
-    except:
+    except IOError as e:
         print(e)
 
     # gera arquivos grafo e grafo_indexado
