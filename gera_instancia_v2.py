@@ -363,7 +363,8 @@ def  mostra_rotas(Grafo):
         # utilizando este novo trecho será interpretado como o endereço da pasta de perfil que no Windows retorna o diretório do usuário, no seu caso C:\Users\Frederico, 
         # no meu C:\Users\joao1 assim o programa vai funcionar sem que precisemos modificar pra rodar o código
         pasta_usuario = (os.environ.get('USERPROFILE') or os.environ.get('HOME')).replace('\\', '/')
-        saidaUHGA = open(pasta_usuario + "/Dropbox/Projeto Pesquisa/Gerador de Instâncias MCGRP/CARP/CARP_Code_and_Instances/Solutions/CPS_CentroMCGRP.sol", "r")
+        #saidaUHGA = open(pasta_usuario + "/Dropbox/Projeto Pesquisa/Gerador de Instâncias MCGRP/CARP/CARP_Code_and_Instances/Solutions/CPS_CentroMCGRP.sol", "r")
+        saidaUHGA = open("CPS_CentroMCGRP.sol", "r")
         
     except IOError as e:
         print ("[Mensagem] Abertura de arquivo de leitura não deu certo.\n", e)
